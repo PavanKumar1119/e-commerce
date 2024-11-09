@@ -89,6 +89,10 @@ const PlaceOrder = () => {
           break;
 
         case "stripe":
+          if (!token) {
+            toast.error("NOT AUTHORIZED LOGIN AGAIN");
+            return null;
+          }
           responseStripe = await axios.post(
             backendUrl + "/api/order/stripe",
             orderData,
