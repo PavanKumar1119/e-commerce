@@ -127,7 +127,7 @@ const verifyStripe = async (req, res) => {
 };
 
 //placing orders using Razorpay method
-const placeOrderRazorpay = async (req, res) => {};
+// const placeOrderRazorpay = async (req, res) => {};
 
 //All orders data for admin panel
 const allOrders = async (req, res) => {
