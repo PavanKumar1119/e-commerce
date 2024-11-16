@@ -4,7 +4,6 @@ import {
   allOrders,
   updateStatus,
   userOrders,
-  placeOrderRazorpay,
   placeOrderStripe,
   verifyStripe,
 } from "../controllers/orderController.js";

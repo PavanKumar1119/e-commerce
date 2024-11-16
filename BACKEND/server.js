@@ -28,6 +28,8 @@ app.use(
     credentials: true, // If using cookies/auth tokens
   })
 );
+app.options("*", cors());
+
 app.use(express.urlencoded({ extended: true }));
 
 //api endpoints
