@@ -65,6 +65,7 @@ const ShopContextProvider = (props) => {
         } catch (error) {}
       }
     }
+
     return totalCount;
   };
 
