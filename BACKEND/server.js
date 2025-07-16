@@ -18,8 +18,13 @@ connectCloudinary();
 //Middlewares
 app.use(express.json());
 // Allow CORS for the frontend domain
-app.use(cors());
-app.options("*", cors());
+
+app.use(
+  cors({
+    origin: ["https://foreverstore.vercel.app", "http://localhost:3000"],
+    credentials: true,
+  })
+);
 
 app.use(express.urlencoded({ extended: true }));
 
