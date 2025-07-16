@@ -57,7 +57,8 @@ const Orders = ({ token }) => {
 
   useEffect(() => {
     fetchAllOrders();
-  });
+  }, []); // 👈 Add this
+
   return (
     <div>
       <h3>Order Page</h3>
