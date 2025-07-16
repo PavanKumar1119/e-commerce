@@ -58,7 +58,6 @@ const Orders = ({ token }) => {
   useEffect(() => {
     fetchAllOrders();
   });
-
   return (
     <div>
       <h3>Order Page</h3>
