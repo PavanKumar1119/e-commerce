@@ -1,5 +1,4 @@
 
-```markdown
 # 🛍️ Full Stack E-commerce Website
 
 This project is a comprehensive full-stack e-commerce application built using the MERN stack (MongoDB, Express.js, React.js, Node.js), integrating powerful payment gateways like Stripe and Razorpay, along with Cash on Delivery. It features both a user-facing frontend and a robust admin panel for managing products and orders.
