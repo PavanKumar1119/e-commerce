@@ -1,4 +1,3 @@
-Here is a visually appealing `README.md` file for your full-stack e-commerce project, drawing on the details provided in the sources:
 
 ```markdown
 # 🛍️ Full Stack E-commerce Website
