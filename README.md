@@ -158,4 +158,3 @@ To set up and run the project locally:
     ```
 
 Ensure all three (backend, frontend, admin) are running simultaneously in separate terminal windows for full functionality.
-```
