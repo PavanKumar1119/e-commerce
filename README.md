@@ -1,7 +1,6 @@
-
 # 🛍️ Full Stack E-commerce Website
 
-This project is a comprehensive full-stack e-commerce application built using the MERN stack (MongoDB, Express.js, React.js, Node.js), integrating powerful payment gateways like Stripe and Razorpay, along with Cash on Delivery. It features both a user-facing frontend and a robust admin panel for managing products and orders.
+This project is a comprehensive full-stack e-commerce application built using the MERN stack (MongoDB, Express.js, React.js, Node.js), integrating powerful payment gateway Stripe, along with Cash on Delivery. It features both a user-facing frontend and a robust admin panel for managing products and orders.
 
 ## ✨ Key Features
 
@@ -33,7 +32,7 @@ The user-facing part of the application provides a seamless shopping experience:
     *   **Proceed to Checkout**: Directs users to the place order page.
 *   **Checkout/Place Order Page**:
     *   **Delivery Information Form**: Users enter their **delivery details** (name, address, phone number, email).
-    *   **Payment Gateway Selection**: Multiple options available: **Stripe**, **Razorpay**, or **Cash on Delivery** (COD).
+    *   **Payment Gateway Selection**: Options available: **Stripe** or **Cash on Delivery** (COD).
     *   **Place Order**: Submits the order based on selected payment method.
 *   **My Orders Page**:
     *   Displays a list of **products ordered** by the user.
@@ -68,10 +67,6 @@ The application supports multiple payment methods to cater to diverse user prefe
     *   Allows for **secure online credit/debit card payments**.
     *   Manages **payment sessions** and redirects to Stripe's checkout page.
     *   Includes **payment verification** upon successful or cancelled transactions, handling order status and cart clearing accordingly.
-*   **Razorpay Integration**:
-    *   Enables **online payments** via Razorpay's platform.
-    *   Creates **Razorpay orders** and handles payment execution through a secure popup.
-    *   **Verifies payments** to update order status and clear user carts.
 *   **Cash on Delivery (COD)**:
     *   Provides a traditional **offline payment option**, placing orders directly without online payment processing.
 
@@ -85,11 +80,11 @@ The project leverages a modern and robust technology stack:
 *   **Image Storage**: **Cloudinary** for secure and scalable image uploads and hosting.
 *   **Authentication**: **JSON Web Tokens (JWT)** for user and admin authentication.
 *   **Password Hashing**: **Bcrypt** for secure password storage.
-*   **Payment Gateways**: **Stripe** and **Razorpay** SDKs.
+*   **Payment Gateway**: **Stripe** SDKs.
 *   **Environment Variables**: **Dotenv (`dotenv`)** for managing sensitive API keys and configurations.
 *   **CORS**: **CORS middleware** for enabling cross-origin requests.
 *   **Notifications**: **React Toastify** for displaying user feedback notifications.
-*   **Validation**: **Validator.js** for input validation (e.g., email format, strong password).
+*   **Validation**: **Validator.js** for input validation (e.g., email format).
 
 ## 🚀 Deployment
 
@@ -108,7 +103,7 @@ The project is designed for easy deployment on **Vercel**.
     *   Import the GitHub repository as a new project on Vercel.
     *   For each sub-project (backend, frontend, admin), specify the **root directory** (e.g., `/backend`, `/frontend`, `/admin`).
 6.  **Environment Variables**:
-    *   Provide all necessary **environment variables** (e.g., `MONGODB_URI`, `JWT_SECRET`, `CLOUDINARY_API_KEY`, `STRIPE_SECRET_KEY`, `RAZORPAY_KEY_ID`, `VITE_BACKEND_URL`) in Vercel's project settings.
+    *   Provide all necessary **environment variables** (e.g., `MONGODB_URI`, `JWT_SECRET`, `CLOUDINARY_API_KEY`, `STRIPE_SECRET_KEY`, `VITE_BACKEND_URL`) in Vercel's project settings.
     *   The `VITE_BACKEND_URL` for frontend and admin panels should point to the deployed backend URL from Vercel.
 7.  **Deploy**: Initiate the deployment process for each sub-project.
 
@@ -121,7 +116,7 @@ To set up and run the project locally:
     *   npm (Node Package Manager) or Yarn
     *   A MongoDB Atlas account (for database setup).
     *   A Cloudinary account (for image hosting).
-    *   Stripe and Razorpay developer accounts (if testing online payments).
+    *   Stripe developer accounts (if testing online payments).
 2.  **Clone the Repository**:
     ```bash
     git clone <your-repository-url>
@@ -131,7 +126,7 @@ To set up and run the project locally:
     ```bash
     cd backend
     npm install
-    # Create a .env file and add your MongoDB_URI, JWT_SECRET, Cloudinary API keys, Stripe/Razorpay keys, and admin credentials.
+    # Create a .env file and add your MongoDB_URI, JWT_SECRET, Cloudinary API keys, Stripe keys, and admin credentials.
     # Example .env content:
     # MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.abcde.mongodb.net/ecommerce?retryWrites=true&w=majority
     # JWT_SECRET=your_jwt_secret_key
@@ -141,18 +136,15 @@ To set up and run the project locally:
     # ADMIN_EMAIL=admin@example.com
     # ADMIN_PASSWORD=adminpassword
     # STRIPE_SECRET_KEY=your_stripe_secret_key
-    # RAZORPAY_KEY_ID=your_razorpay_key_id
-    # RAZORPAY_KEY_SECRET=your_razorpay_key_secret
     npm run server # Starts the backend server with nodemon
     ```
 4.  **Frontend Setup**:
     ```bash
     cd ../frontend
     npm install
-    # Create a .env file and add your backend URL and Razorpay Key ID
+    # Create a .env file and add your backend URL
     # Example .env content:
     # VITE_BACKEND_URL=http://localhost:4000
-    # VITE_RAZORPAY_KEY_ID=your_razorpay_key_id (frontend only needs ID)
     npm run dev # Starts the frontend React app
     ```
 5.  **Admin Panel Setup**:
